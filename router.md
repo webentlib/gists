@@ -31,7 +31,7 @@ export const patterns = [
 
 2. Move `routes/` folder wherever you like, create `[...path]` folder inside.
 
-3. Create 4 files:
+3. Create 4 files:  
 `[...path]/+page.ts`:
 ```ts
 import {Router} from '/lab/router.ts';
@@ -83,7 +83,7 @@ export async function load(params) {
 {/await}
 ```
 
-4. Create urls in root (same level with `package.json`):
+4. Create urls in root (same level with `package.json`):  
 `urls.ts`:
 ```ts
 const layout = {page: () => import('/src/base.svelte')};
@@ -93,7 +93,7 @@ export const patterns = [
 ]
 ```
 
-5. Create sample pages in `/src/`:
+5. Create sample pages in `/src/`:  
 `base.svelte`:
 ```svelte
 <script>
@@ -106,7 +106,7 @@ export const patterns = [
 Hello, world!
 ```
 
-6. Point svelte to routes folder you want it to be in:
+6. Point svelte to routes folder you want it to be in:  
 `svelte.config.ts`:
 ```ts
 kit: {
@@ -117,7 +117,7 @@ kit: {
 }
 ```
 
-7. Allow vite look files in root:
+7. Allow vite look files in root:  
 `vite.config.ts`:
 ```ts
 export default defineConfig({
@@ -154,7 +154,7 @@ Yes. One can specify:
 2. For sure multiple patterns can point to same page like `users` and `friends` in example in case same template but different data. 
 3. Custom error for any page or layout.
 `error.svelte`:
-```
+```svelte
 <script lang="ts">
 	import { page } from '$app/state';
 </script>
@@ -165,7 +165,7 @@ Yes. One can specify:
 ```js
     {path: '', universal: () => import('/src/home.server.js'), server: () => import('/src/home.js'), ...},
 ```
-5. Add any custom attribute like `title`, `h1`, `name` to be used later in layout/page.
+5. Add any custom attributes like `title`, `h1`, `name` to be used later in layout/page.
 `base.svelte`:
 ```svelte
 <script>
@@ -180,7 +180,7 @@ Yes. One can specify:
 {@render children?.()}
 ```
 
-If one prefer both server and universal to be in `<script module>`:
+If one prefer both server and universal to be in `<script module>`:  
 `user.svelte`:
 ```svelte
 <script module>
@@ -206,7 +206,7 @@ If one prefer both server and universal to be in `<script module>`:
 3. No pragmatic way to specify options like `export let ssr = true;` probably one can do it like (not tested):
 `urls.ts`:
 ```ts
-    {path: '', options: { ssr: true }},
+{path: '', ..., options: { ssr: true }},
 ```
 `+page.server.ts`:
 ```ts
@@ -231,7 +231,7 @@ Same for `+page.ts` but `return await Router.route(params, true)` must be `retur
 
 # P.S.
 
-That router is TS only, and was written with next tsconfig:
+That router is TS only, and was written with next tsconfig:  
 `tsconfig.json`:
 ```json
 "rewriteRelativeImportExtensions": false,
