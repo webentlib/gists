@@ -11,7 +11,7 @@ export const patterns = [
 ```
 
 `users.svelte`
-```sveltehtml
+```svelte
 <script module>
     export async function load() {
         return {
