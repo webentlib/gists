@@ -49,7 +49,7 @@ export async function load(params) {
 ```
 
 `[...path]/+page.svelte`:
-```sveltehtml
+```svelte
 <script>
     import { routeStore } from '/lab/router.ts';
     const { data } = $props();
@@ -69,7 +69,7 @@ export async function load(params) {
 ```
 
 `+error.svelte` (note — must be in `routes/`, not `[...path]`):
-```sveltehtml
+```svelte
 <script lang="ts">
 	import { page } from '$app/state';
 	import { Router } from '/lab/router.ts';
@@ -95,14 +95,14 @@ export const patterns = [
 
 5. Create sample pages in `/src/`:
 `base.svelte`:
-```sveltehtml
+```svelte
 <script>
     let { children } = $props();
 </script>
 {@render children?.()}
 ```
 `home.svelte`:
-```sveltehtml
+```svelte
 Hello, world!
 ```
 
@@ -167,7 +167,7 @@ Yes. One can specify:
 ```
 5. Add any custom attribute like `title`, `h1`, `name` to be used later in layout/page.
 `base.svelte`:
-```sveltehtml
+```svelte
 <script>
     import { routeStore } from '/lab/router.ts';
     let { children } = $props();
@@ -182,7 +182,7 @@ Yes. One can specify:
 
 If one prefer both server and universal to be in `<script module>`:
 `user.svelte`:
-```sveltehtml
+```svelte
 <script module>
     import { get } from 'svelte/store';
     import { routeStore } from '/lab/router.ts';
