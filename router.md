@@ -27,7 +27,7 @@ export const patterns = [
 
 # INSTALLATION:
 
-1. Download `router.ts` to some folder all external gists live, e.g.: /lab/.
+1. Download [router.ts](https://github.com/webentlib/gists/blob/main/router.ts) to some folder all external gists live, e.g.: /lab/.
 
 2. Move `routes/` folder wherever you like, create `[...path]` folder inside.
 
