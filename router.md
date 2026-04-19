@@ -201,7 +201,7 @@ If one prefer both server and universal to be in `<script module>`:
 
 1. Both `+page.server.js` and `+page.js` runs on every rote. No way to say 'call only `+page.js`'.
 
-2. `export const snapshow = {...}` not working.
+2. `export const snapshot = {...}` not working.
 
 3. No pragmatic way to specify options like `export let ssr = true;` probably one can do it like (not tested):
 `urls.ts`:
