@@ -1,4 +1,4 @@
-## MINIMAL EXAMPLE:
+## Minimal Example:
 
 `urls.ts`:
 ```ts
@@ -25,7 +25,7 @@ export const patterns = [
 </script>
 ```
 
-## INSTALLATION:
+## Installation:
 
 1. Download [router.ts](https://github.com/webentlib/gists/blob/main/router.ts) to some folder all external gists live, e.g.: /lab/.
 
@@ -130,7 +130,7 @@ export default defineConfig({
 });
 ```
 
-## EXTENDED EXAMPLE:
+## Extended Example:
 
 `urls.ts`:
 ```ts
@@ -197,7 +197,7 @@ If one prefer both server and universal to be in `<script module>`:
 </script>
 ```
 
-## DOWNSIDES:
+## Downsides:
 
 1. Both `+page.server.js` and `+page.js` runs on every rote. No way to say 'call only `+page.js`'.
 
