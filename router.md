@@ -1,4 +1,4 @@
-MINIMAL EXAMPLE:
+# MINIMAL EXAMPLE:
 
 `urls.ts`:
 ```ts
@@ -25,7 +25,7 @@ export const patterns = [
 </script>
 ```
 
-INSTALLATION:
+# INSTALLATION:
 
 1. Download `router.ts` to some folder all external gists live, e.g.: /lab/.
 
@@ -130,7 +130,7 @@ export default defineConfig({
 });
 ```
 
-EXTENDED EXAMPLE:
+# EXTENDED EXAMPLE:
 
 `urls.ts`:
 ```ts
@@ -197,7 +197,7 @@ If one prefer both server and universal to be in `<script module>`:
 </script>
 ```
 
-DOWNSIDES:
+# DOWNSIDES:
 
 1. Both `+page.server.js` and `+page.js` runs on every rote. No way to say 'call only `+page.js`'.
 
@@ -229,7 +229,8 @@ export async function load(params) {
 ```
 Same for `+page.ts` but `return await Router.route(params, true)` must be `return await Router.route(params)` there.
 
-P.S.
+# P.S.
+
 That router is TS only, and was written with next tsconfig:
 `tsconfig.json`:
 ```json
